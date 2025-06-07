@@ -4,3 +4,197 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* LANDING */
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f7f3ef;
+  color: white;
+  text-align: center;
+}
+
+.enter-button {
+  border: none;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  font-size: 1.8rem;
+  text-transform: none;
+  transition: all 0.3s ease;
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.enter-button:hover {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+}
+
+.billede-container {
+  position: relative; /* Muliggør absolut positionering inde i containeren */
+  width: 100%;
+  overflow: hidden; /* Skjuler alt udenfor containerens ramme */
+  margin-top: 80px;
+}
+
+.enter_billede {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+/* FORSIDE */
+.logo img {
+  width: 120px;
+}
+body {
+  margin: 0; /* Fjerner standard-margin fra browseren */
+  display: flex;
+  flex-direction: column; /* Indholdet stables lodret */
+  min-height: 100vh; /* Sikrer at siden fylder hele skærmhøjden */
+  background-color: #f7f3ef;
+}
+
+.logo {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
+  padding-left: 15px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #000000;
+}
+
+main.forside {
+  flex: 1; /* Fylder al tilgængelig plads mellem header og footer */
+  padding: 1rem;
+  text-align: center;
+}
+
+.titel {
+  font-size: 2.5rem;
+  margin-top: -30px;
+  margin-right: 240px;
+}
+
+.video-container {
+  position: relative; /* Muliggør absolut positionering inde i containeren */
+  width: 100%;
+  overflow: hidden; /* Skjuler alt udenfor containerens ramme */
+  margin-top: 27px;
+}
+
+.video-container video {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.knap {
+  display: inline-block; /* Gør knappen til en inline-boks */
+  padding: 0.5rem 1.5rem;
+  border: 1.4px solid #000000;
+  border-radius: 9999px;
+  text-decoration: none;
+  color: #000000;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  margin-top: 20px;
+}
+
+.knap:hover {
+  background-color: #d3e8eb;
+}
+
+/* TEKST */
+h1 {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 800px) {
+  main.forside {
+    max-width: 900px; /* Begrænser indholdets bredde */
+    margin: 0 auto; /* Centrerer indholdet på større skærme */
+  }
+
+  .titel {
+    font-size: 3.5rem;
+    margin-right: 595px;
+  }
+  .logo a {
+    font-size: 2rem;
+  }
+
+  .video-container,
+  .billede-container {
+    max-width: 900px;
+  }
+
+  .knap {
+    padding: 0.7rem 1.4rem;
+  }
+}
+
+/* FOOTER */
+footer {
+  background-color: #f7f3ef;
+  padding: 2rem;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer li {
+  margin-bottom: 0.3rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000000;
+}
+
+footer a:hover {
+  color: #25516e;
+}
+
+.footer-left {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer-left a {
+  color: #000000;
+  font-size: 23px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-left a:hover {
+  color: #25516e;
+}
