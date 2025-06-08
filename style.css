@@ -65,22 +65,10 @@ body {
   background-color: #f7f3ef;
 }
 
-.logo {
-  font-family: "Comfortaa", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1.5rem;
-  padding-left: 15px;
-}
-
-.logo a {
-  text-decoration: none;
-  color: #000000;
-}
-
-main.forside {
+main {
   flex: 1; /* Fylder al tilgængelig plads mellem header og footer */
+}
+main.forside {
   padding: 1rem;
   text-align: center;
 }
@@ -121,8 +109,95 @@ main.forside {
 }
 
 .knap:hover {
-  background-color: #d3e8eb;
+  background-color: #ffe5dc;
 }
+
+/* PORTFOLIO SIDE */
+.projekter {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding-inline: 1rem;
+
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.projekt {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.4s ease;
+}
+.projekt.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projekt:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.projekt.to {
+  background-image: url(img/bakke.webp);
+  background-size: cover;
+  background-position: center;
+}
+.projekt.tre {
+  background-image: url(img/dame.webp);
+  background-size: cover;
+  background-position: center;
+}
+.projekt.fire {
+  background-image: url(img/kamel.webp);
+  background-size: cover;
+  background-position: center;
+}
+.projekt.fem {
+  background-image: url(img/æsel.webp);
+  background-size: cover;
+  background-position: center;
+}
+.number {
+  font-size: 2rem;
+  padding: 1rem 1rem 0 1rem;
+  color: #eee;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+.projekt img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 0;
+  aspect-ratio: 2/1;
+}
+
+.label {
+  padding: 1rem;
+}
+
+.label .title {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+  color: #ffffff;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* OM MIG SIDE */
 
 /* TEKST */
 h1 {
@@ -131,34 +206,10 @@ h1 {
   font-style: normal;
 }
 
-@media (min-width: 800px) {
-  main.forside {
-    max-width: 900px; /* Begrænser indholdets bredde */
-    margin: 0 auto; /* Centrerer indholdet på større skærme */
-  }
-
-  .titel {
-    font-size: 3.5rem;
-    margin-right: 595px;
-  }
-  .logo a {
-    font-size: 2rem;
-  }
-
-  .video-container,
-  .billede-container {
-    max-width: 900px;
-  }
-
-  .knap {
-    padding: 0.7rem 1.4rem;
-  }
-}
-
 /* FOOTER */
 footer {
   background-color: #f7f3ef;
-  padding: 2rem;
+  padding: 1rem;
   font-size: 0.8rem;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -168,6 +219,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 }
 
 footer li {
@@ -190,11 +242,86 @@ footer a:hover {
 
 .footer-left a {
   color: #000000;
-  font-size: 23px;
+  font-size: 25px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-left a:hover {
   color: #25516e;
+}
+
+@media (min-width: 800px) {
+  main.forside {
+    max-width: 900px; /* Begrænser indholdets bredde */
+    margin: 0 auto; /* Centrerer indholdet på større skærme */
+  }
+
+  .titel {
+    font-size: 4.5rem;
+    margin-right: 540px;
+    margin-bottom: -30px;
+  }
+  .logo a {
+    font-size: 2rem;
+  }
+
+  .video-container,
+  .billede-container {
+    max-width: 900px;
+  }
+
+  .knap {
+    padding: 0.7rem 1.4rem;
+  }
+
+  /* PORTFOLIO */
+  .projekter {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding-inline: 2rem;
+  }
+
+  .projekt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .number {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    font-size: 5rem;
+    padding-top: 1rem;
+  }
+
+  .label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 6.5rem 0;
+    display: flex;
+  }
+
+  .label .title {
+    font-size: 2rem;
+  }
+
+  .title.to {
+    position: relative;
+    bottom: 180px;
+  }
+  .title.tre {
+    position: relative;
+    bottom: 150px;
+  }
+  .title.fire {
+    position: relative;
+    bottom: 100px;
+  }
+  .title.fem {
+    position: relative;
+    bottom: 136px;
+  }
 }
