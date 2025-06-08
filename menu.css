@@ -52,7 +52,7 @@ nav {
 }
 
 .menu a:hover {
-  color: #9abbc3;
+  color: #87a696;
 }
 
 .burger {
@@ -116,4 +116,49 @@ nav {
   nav {
     padding: 20px;
   }
+}
+
+/* FOOTER */
+footer {
+  background-color: #f7f3ef;
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+footer li {
+  margin-bottom: 0.3rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000000;
+}
+
+footer a:hover {
+  color: #87a696;
+}
+
+.footer-left {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer-left a {
+  color: #000000;
+  font-size: 25px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-left a:hover {
+  color: #87a696;
 }
