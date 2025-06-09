@@ -322,6 +322,13 @@ main.tema {
   font-size: 1rem;
 }
 
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
 .links a {
   display: inline-block;
   text-decoration: none;
@@ -468,7 +475,7 @@ main.tema {
     left: 30%;
   }
 
-  /* TEMA 2 */
+  /* TEMA SIDER */
   .projektbeskrivelse,
   .refleksion {
     grid-template-columns: 1fr 1fr;
@@ -499,7 +506,7 @@ main.tema {
   .intro h1 {
     font-size: 5.3rem;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .intro h2 {
