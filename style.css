@@ -7,9 +7,17 @@
 
 /* TEKST */
 h1 {
-  font-family: "Reenie Beanie", cursive;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 240;
   font-style: normal;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 240;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 /* LANDING */
@@ -81,10 +89,11 @@ main.forside {
 }
 
 .overskrift1 {
-  font-size: 3.5rem;
-  margin-top: 95px;
-  margin-bottom: -40px;
-  margin-right: 250px;
+  font-size: 2.8rem;
+  margin-top: 120px;
+  margin-bottom: -45px;
+  margin-right: 246px;
+  color: #edb9b9;
 }
 
 .video-container {
@@ -103,21 +112,21 @@ main.forside {
 .knap {
   display: inline-block; /* Gør knappen til en inline-boks */
   padding: 0.5rem 1.5rem;
-  border: 1.4px solid #000000;
+  border: 1.5px solid #ffe2df;
   border-radius: 9999px;
   text-decoration: none;
   color: #000000;
-  background-color: transparent;
+  background-color: #fbe2e1;
   transition: background-color 0.3s ease;
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   margin-top: 20px;
 }
 
 .knap:hover {
-  background-color: #ffe2da;
+  background-color: #fcdbd7;
 }
 
 /* PORTFOLIO SIDE */
@@ -141,7 +150,7 @@ main.forside {
   display: flex;
   flex-direction: column;
   border: 1px solid #eee;
-  border-radius: 10px;
+  border-radius: 9px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -223,7 +232,7 @@ main.forside {
 .overskrift2 {
   padding: 0.8rem 1rem;
   margin: 0;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 .tekst {
@@ -246,13 +255,13 @@ main.forside {
 }
 
 .illustration-1 {
-  top: 895px;
-  left: 10px;
+  top: 880px;
+  left: 2px;
 }
 
 .illustration-2 {
-  bottom: 55px;
-  right: 2px;
+  bottom: 75px;
+  right: 10px;
 }
 
 .illustration-3 {
@@ -267,14 +276,7 @@ main.forside {
   background-attachment: fixed;
   background-size: cover;
 }
-p,
-.links a {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 240;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-}
+
 .tema-knap {
   display: inline-block; /* Gør knappen til en inline-boks */
   padding: 0.5rem 1.5rem;
@@ -284,9 +286,13 @@ p,
   color: #000000;
   background-color: transparent;
   transition: background-color 0.3s ease;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 .tema-knap:hover {
-  background-color: #ffe2da;
+  background-color: #ffdedb;
 }
 main.tema {
   display: grid;
@@ -365,9 +371,9 @@ main.tema {
   }
 
   .overskrift1 {
-    font-size: 5rem;
-    margin-right: 640px;
-    margin-bottom: -10px;
+    font-size: 4.5rem;
+    margin-right: 587px;
+    margin-bottom: 2.4px;
     margin-top: -30px;
   }
   .logo a {
@@ -379,7 +385,7 @@ main.tema {
     max-width: 900px;
   }
   .video-container {
-    margin-top: 5px;
+    margin-top: -20px;
   }
   .knap {
     padding: 0.7rem 1.4rem;
@@ -420,11 +426,11 @@ main.tema {
 
   .title.to {
     position: relative;
-    bottom: 180px;
+    bottom: 177px;
   }
   .title.tre {
     position: relative;
-    bottom: 150px;
+    bottom: 154px;
   }
   .title.fire {
     position: relative;
@@ -432,12 +438,12 @@ main.tema {
   }
   .title.fem {
     position: relative;
-    bottom: 136px;
+    bottom: 130px;
   }
 
   /* OM MIG */
   .overskrift2 {
-    font-size: 4.5rem;
+    font-size: 3rem;
     padding: 0.1rem 1rem;
   }
   .indhold {
@@ -471,7 +477,7 @@ main.tema {
   }
 
   .illustration-3 {
-    top: 93px;
+    top: 90px;
     left: 30%;
   }
 
